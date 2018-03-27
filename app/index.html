@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic Scene with Environment - A-Frame</title>
+    <meta name="description" content="Basic Scene with Environment - A-Frame">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> 
+    <script src="https://unpkg.com/aframe-environment-component@1.0.0/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <!-- Try changing the preset to one of default, contact, egypt, checkerboard, forest, goaland, yavapai, goldmine, 
+         threetowers, poison, arches, tron, japan, dream, volcano, starry, osiris. -->
+    <!-- See more environment options: https://github.com/feiss/aframe-environment-component#parameters -->
+    <a-scene environment="preset: dream">
+      <a-assets>
+        <img id="boxTexture" src="https://cdn.glitch.com/91358a42-07d8-4c24-9b94-d864673965a2%2FUE4Editor_2017-11-14_05-35-21-1920x1080-95f62c7dc066de7ad5f4c6d961a848bb.png?1522073420431"
+             position="0 0.15 -5">
+        
+        
+      </a-assets>
+      
+
+      <a-text value="Menu" color="#2081c3" position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
+      
+      <a-camera>0
+        <a-cursor color="#FAFAFA"></a-cursor>
+        
+        <a-entity id="sphere" geometry="primitive: circle; radius: 1.8"
+                material="src: https://cdn.glitch.com/91358a42-07d8-4c24-9b94-d864673965a2%2FCerchioMenu.png?1522075371083; 
+                          color: #ffffff; opacity: 0.80"
+                position="0 0.15 -5" scale = "1.6 1.2 1"
+                  ></a-entity>
+  
+        
+        <a-entity id="letterA" geometry="primitive: circle"
+                material="src: https://cdn.glitch.com/91358a42-07d8-4c24-9b94-d864673965a2%2Ftext.png?1522070520165; 
+                          color: #ffffff; opacity: 0.80"
+                position="0 0.15 -5"></a-entity>
+        
+        <!--<a-circle position="0 2 -5" rotation="0 0 0" scale="2 2 2" src="#boxTexture" opacity: 100>
+<a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
+          to="0 2.2 -5"></a-animation>
+        <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
+        <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
+        <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+          
+        </a-circle>
+        -->
+        
+        
+        
+      </a-camera>
+      
+    </a-scene>
+  </body>
+</html>
